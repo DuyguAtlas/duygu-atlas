@@ -6,7 +6,18 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="./css/style.css" type="text/css">
     <link rel="icon" type="image/x-icon" href="./img/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script defer src="js/script.js"></script>
+    <style>
+        .gradient-icons {
+            font-size: 40px; /* Pas de grootte aan */
+            background-image: linear-gradient(to right, #de1c4b, #3c537a); /* Lineaire gradient */
+            color: transparent; /* Maakt de tekst transparant */
+            -webkit-background-clip: text; /* Voor WebKit browsers zoals Chrome en Safari */
+            background-clip: text; /* Voor andere moderne browsers */
+            display: inline-block; /* Zorgt ervoor dat de gradient goed wordt toegepast */
+        }
+    </style>
 </head>
 <body>
     <div class="color-container">
@@ -41,17 +52,18 @@
                 <h2 class="about-title hidden">ABOUT <strong>ME</strong></h2>
                     <p class="about-desc hidden">
                         Hallo!
-                        Ik ben <b>Duygu</b>, een eerstejaars student <b>Informatica</b> aan <b>NHL Stenden</b> in <b>Emmen</b>.
+                        Ik ben Duygu, een eerstejaars student Informatica aan NHL Stenden in Emmen.
                     </p>
-                    <p class="about-desc hidden">Naast coderen <b>teken</b> ik graag. Ik houd ook veel van <b>gamen</b>.</p>             
+                    <p class="about-desc hidden">Naast coderen teken ik graag.</p>             
                     <hr class="hr hidden">
                     <p class="about-desc hidden">Ik ben bekend met:</p>
 
-                <ul class="about-ul">
-                    <li class="about-list hidden"><b>HTML</b></li>
-                    <li class="about-list hidden"><b>CSS</b></li>
-                    <li class="about-list hidden"><b>PHP</b></li>
-                </ul>
+                    <ul class="about-ul">
+                        <li class="about-list hidden"><i class="fa-brands fa-html5 gradient-icons"></i> HTML</li>
+                        <li class="about-list hidden"><i class="fa-brands fa-css3-alt gradient-icons"></i> CSS</li>
+                        <li class="about-list hidden"><i class="fa-brands fa-php gradient-icons"></i> PHP</li>
+                    </ul>
+                    
             </div> 
          </section>
 

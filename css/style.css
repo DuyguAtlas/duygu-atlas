@@ -68,6 +68,15 @@ h1 {
   gap: 20px;
 }
 
+.gradient-icons {
+  font-size: 50px;
+  background-image: linear-gradient(to right, #de1c4b, #3c537a); 
+  color: transparent; 
+  -webkit-background-clip: text;
+  background-clip: text; 
+  display: inline-block; 
+}
+
 .contact-btn {
   font-weight: 600;
   text-decoration: none;
@@ -173,15 +182,26 @@ strong {
   width: 75%;
   margin-block: 20px;
 }
-
+/* Beperkt de breedte van de content */
 .about-content {
-  max-width: 50%;
+    max-width: 50%;
 }
+
+/* Styling voor de titel */
 .about-title {
-  padding-bottom: 20px;
+    padding-bottom: 20px;
 }
+
+/* Styling voor de lijstitems */
 .about-list {
-  margin-block: 20px;
+    display: flex; /* Zorgt ervoor dat icoon en tekst naast elkaar staan */
+    align-items: center; /* Centreert de tekst verticaal met het icoon */
+    font-size: 20px; /* Optioneel: vergroot de tekst */
+    margin-block: 20px;
+}
+
+.fa-brands {
+  margin-right: 10px;
 }
 
 /* ---------------------------- Professional Skills (PS) Section ---------------------------- */

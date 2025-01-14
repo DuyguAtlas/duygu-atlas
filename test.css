@@ -1,0 +1,17 @@
+body {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.chip {
+    width: 60px;
+    display:flex;
+    justify-content: center;
+    background-color: blue;
+    color: white;
+    border-radius: 50px;
+    padding: 8px 10px;
+}
+.chip-icon {
+    margin-right: 5px;
+}
