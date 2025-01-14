@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/code.css" type="text/css">
+    <title>ENTER CODE</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="code-container">
+            <div class="code-input">
+                <h1>ENTER CODE</h1>
+                <input class="input-line" type="password" id="access-code" placeholder="" onkeyup="checkEnter(event)">
+            </div>
+        </div>
+
+        <div class="color-container">
+            <div class="color"></div>
+        </div>
+    </div>
+    <script>
+        function checkEnter(event) {
+            if (event.key === 'Enter') {
+                unlockContent();
+            }
+        }
+
+        function unlockContent() {
+            const correctCode = "Ve234_mJNE";
+            const enteredCode = document.getElementById("access-code").value;
+            if (enteredCode === correctCode) {
+                window.location.href = "portfolio.html";
+            } else {
+                alert("Incorrect code. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
+

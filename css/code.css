@@ -1,0 +1,127 @@
+
+  /* ---------------------------- Global Styles ---------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  html, body {
+    width: 100%;
+    height: 100%;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    color: white;
+    font-family: 'Satoshi';
+    position: relative;
+    cursor: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><circle cx="8" cy="8" r="5" fill="white"/></svg>') 8 8, auto;
+    background-color: #030408;
+    overflow-x: hidden;
+  
+  }
+
+  strong {
+    background-image: linear-gradient(to right, #de1c4b, #3c537a); /* Linear gradient */
+    color: transparent; /* Makes the text color transparent */
+    -webkit-background-clip: text; /* Clips the background to the text */
+    background-clip: text; /* For non-webkit browsers */
+  }
+
+  /* ---------------------------- Custom Fonts ---------------------------- */
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('../fonts/Satoshi_Complete/Fonts/OTF/Satoshi-Light.otf') format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('../fonts/Satoshi_Complete/Fonts/OTF/Satoshi-Regular.otf') format('opentype');
+  }
+  
+  #wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+}
+
+  /* ---------------------------- Header Section ---------------------------- */
+  .code-container {
+    display: flex;
+    justify-content: center;
+    animation: fade-up 1s;   
+    position: relative;
+    z-index: 1;
+  }
+
+  body {
+    overflow: hidden; /* Hide scrollbars */
+  }
+  
+  .code-input {
+    font-size: larger;
+    width: 1500px;
+    padding-top: 180px;
+    text-align: center;
+    height: 50vh;
+    border-radius: 0.5em;
+  }
+  
+  strong {
+    background-image: linear-gradient(to right, #de1c4b, #3c537a); /* Linear gradient */
+    color: transparent; /* Makes the text color transparent */
+    -webkit-background-clip: text; /* Clips the background to the text */
+    background-clip: text; /* For non-webkit browsers */
+  }
+  
+  .input-line {
+    width: 250px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #de1c4b; /* Creates the line effect */
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    outline: none; /* Removes the default focus outline */
+}
+
+.input-line:focus {
+    border-bottom: 2px solid #e11d48; /* Change color when focused */
+}
+
+
+  /* ---------------------------- Background Effects ---------------------------- */
+  .color {
+    height: 1000px;
+    width: 2000px;
+    background-image: radial-gradient(closest-side, #de1c4b,#1e293b, #030408);
+    position: absolute;
+    top: -570px;
+    right: 15%;
+    z-index: 0; /* Move it behind other content */
+    pointer-events: none;
+  }
+  
+  /* ---------------------------- Animations ---------------------------- */
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px) scale(0.9);
+      filter: blur(5px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0px) scale(1);
+      filter: blur(0);
+    }
+  }
+  
+  button {
+    font-size: 20px;
+    border: transparent;
+    margin: 20px;
+  }

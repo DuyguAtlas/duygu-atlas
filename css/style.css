@@ -1,0 +1,426 @@
+/* ---------------------------- Global Styles ---------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  color: white;
+  font-family: 'Satoshi';
+  position: relative;
+  cursor: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><circle cx="8" cy="8" r="5" fill="white"/></svg>') 8 8, auto;
+  background-color: #030408;
+  overflow-x: hidden;
+
+}
+  
+/* ---------------------------- Custom Fonts ---------------------------- */
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../fonts/Satoshi_Complete/Fonts/OTF/Satoshi-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../fonts/Satoshi_Complete/Fonts/OTF/Satoshi-Regular.otf') format('opentype');
+}
+
+/* ---------------------------- General Layout ---------------------------- */
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1500px;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+/* ---------------------------- Navigation ---------------------------- */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  padding: 20px;
+  animation: fade-down 1s;
+  position: relative;
+  scroll-snap-align: start;
+  width: 100%;
+}
+
+.nav-left {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.nav-right {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-btn {
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: -0.05em;
+  background-color: #de1c4b;
+  color: #f1f5f9;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  box-shadow: 0 10px 20px #e11d4880,
+    0 6px 6px rgba(225, 29, 72, 0.5), 0 0 100px -10px #000000;
+  transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+
+.contact-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(225, 29, 72, 0.25),
+    0 10px 10px rgba(225, 29, 72, 0.22), 0 0 120px -10px var(--clr-rose);
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  text-decoration: underline 2px transparent;
+  text-underline-offset: 8px;
+  color: rgb(218, 218, 218);
+  transition: text-decoration-color 500ms;
+}
+
+a:hover:not(.left-logo){
+  text-decoration-color: #de1c4b;
+  color: rgb(255, 255, 255);
+  transition: color 300ms;
+}
+
+/* ---------------------------- Header Section ---------------------------- */
+.header {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  animation: fade-up 1s; 
+
+}
+
+.header-container {
+  font-size: larger;
+  width: 1500px;
+  padding-top: 180px;
+  text-align: center;
+  height: 80vh;
+  border-radius: 0.5em;
+}
+
+strong {
+  background-image: linear-gradient(to right, #de1c4b, #3c537a); /* Linear gradient */
+  color: transparent; /* Makes the text color transparent */
+  -webkit-background-clip: text; /* Clips the background to the text */
+  background-clip: text; /* For non-webkit browsers */
+}
+
+.arrow {
+  position: relative;
+  width: 0;
+  height: 0;
+  display: inline;
+  justify-content: center;
+  top: 20vh;
+}
+
+.arrow .line2 {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-color: transparent;
+}
+
+.arrow .line2 {
+  top: 20px;
+  left: 0;
+  border-width: 0 0 4px 4px;
+  border-left-color: rgb(255, 255, 255);
+  border-bottom-color: rgb(255, 255, 255);
+  transform: rotate(-45deg);
+  width: 30px;
+  height: 30px;
+} 
+
+/* ---------------------------- Content Section ---------------------------- */
+.content-section {
+  display: grid;
+  font-size: 20px;
+  height: 100vh;
+  padding-top: 20px;
+  scroll-snap-align: start;
+}
+
+/* ---------------------------- About Section ---------------------------- */
+
+.hr {
+  border-style: solid;
+  border-color: #de1c4b;
+  width: 75%;
+  margin-block: 20px;
+}
+
+.about-content {
+  max-width: 50%;
+}
+.about-title {
+  padding-bottom: 20px;
+}
+.about-list {
+  margin-block: 20px;
+}
+
+/* ---------------------------- Professional Skills (PS) Section ---------------------------- */
+
+.PS-section > h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.PS-section > li {
+  margin-block: 20px;
+}
+
+.pdf-link {
+  margin-block: 20px;
+}
+
+ul:not(.nav-right) > li {
+  position: relative;
+  padding-left: 20px; /* Adjust space between line and text */
+}
+
+ul:not(.nav-right) > li::before {
+  content: "|"; /* Display the pipe symbol */
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  font-size: 20px; /* Adjust the size of the pipe */
+  color: rgb(255, 255, 255); /* Set the color of the pipe */
+}
+
+/* ---------------------------- Footer Section ---------------------------- */
+.footer-section {
+  padding: 20px;
+  font-size: 18px;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+  display: flex;
+}
+
+/* ---------------------------- Scrollbar Styles ---------------------------- */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 25px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #de1c4b;
+}
+
+/* ---------------------------- PDF Viewer ---------------------------- */
+#pdfContainer {
+  position: fixed;
+  top: 0;
+  right: -50%;
+  width: 40%;
+  height: 100vh;
+  background: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Show when open */
+#pdfContainer.open {
+  right: 0;
+  filter: blur(0);
+}
+
+/* PDF Viewer */
+#pdfViewer {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Close Button */
+#closePdf {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+  filter: blur(5px);
+}
+
+/* ---------------------------- Background Effects ---------------------------- */
+.color {
+  height: 1000px;
+  width: 2000px;
+  background-image: radial-gradient(closest-side, #de1c4b,#1e293b, #030408);
+  position: absolute;
+  top: -570px;
+  right: 15%;
+  z-index: 0; /* Move it behind other content */
+  pointer-events: none;
+}
+
+/* ---------------------------- Hidden/Visible Elements ---------------------------- */
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-80%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.pdf-link:nth-child(1) {
+  transition-delay: 200ms;
+}
+
+.pdf-link:nth-child(2) {
+  transition-delay: 400ms;
+}
+
+.pdf-link:nth-child(3) {
+  transition-delay: 600ms;
+}
+.pdf-link:nth-child(4) {
+  transition-delay: 800ms;
+}
+
+.pdf-link:nth-child(5) {
+  transition-delay: 1000ms;
+}
+
+.pdf-link:nth-child(6) {
+  transition-delay: 1200ms;
+}
+
+.pdf-link:nth-child(7) {
+  transition-delay: 1400ms;
+}
+
+.pdf-link:nth-child(8) {
+  transition-delay: 1600ms;
+}
+
+.pdf-link:nth-child(9) {
+  transition-delay: 1800ms;
+}
+
+.pdf-link:nth-child(10) {
+  transition-delay: 2000ms;
+}
+
+.pdf-link:nth-child(11) {
+  transition-delay: 2200ms;
+}
+
+.pdf-link:nth-child(12) {
+  transition-delay: 2400ms;
+}
+
+.pdf-link:nth-child(13) {
+  transition-delay: 2600ms;
+}
+
+.pdf-link:nth-child(14) {
+  transition-delay: 2800ms;
+}
+
+
+.pdf-link:nth-child(15) {
+  transition-delay: 3000ms;
+}
+
+.about-desc:nth-child(1) {
+  transition-delay: 200ms;
+}
+
+.about-desc:nth-child(2) {
+  transition-delay: 400ms;
+}
+.about-desc:nth-child(3) {
+  transition-delay: 600ms;
+}
+
+.about-desc:nth-child(4) {
+  transition-delay: 600ms;
+}
+.about-desc:nth-child(5) {
+  transition-delay: 800ms;
+}
+
+.hr {
+  transition-delay: 1000ms;
+}
+
+.about-list:nth-child(1) {
+  transition-delay: 1200ms;
+}
+.about-list:nth-child(2) {
+  transition-delay: 1400ms;
+}
+
+.about-list:nth-child(3) {
+  transition-delay: 1600ms;
+}
+
+/* ---------------------------- Animations ---------------------------- */
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px); /* Vertical movement only */
+    filter: blur(5px);
+  } 
+
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Reset to the original position */
+    filter: blur(0);
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+    filter: blur(5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+    filter: blur(0);
+  }
+}
