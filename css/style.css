@@ -113,23 +113,23 @@ a:hover:not(.left-logo){
 }
 
 /* ---------------------------- Header Section ---------------------------- */
-.header {
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-  position: relative;
-  animation: fade-up 1s; 
+  .header {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    animation: fade-up 1s; 
 
-}
+  }
 
-.header-container {
-  font-size: larger;
-  width: 1500px;
-  padding-top: 180px;
-  text-align: center;
-  height: 80vh;
-  border-radius: 0.5em;
-}
+  .header-container {
+    font-size: larger;
+    width: 1500px;
+    padding-top: 180px;
+    text-align: center;
+    height: 80vh;
+    border-radius: 0.5em;
+  }
 
 strong {
   background-image: linear-gradient(to right, #de1c4b, #3c537a); /* Linear gradient */
@@ -144,7 +144,7 @@ strong {
   height: 0;
   display: inline;
   justify-content: center;
-  top: 20vh;
+  top: 30vh;
 }
 
 .arrow .line2 {
@@ -164,6 +164,11 @@ strong {
   width: 30px;
   height: 30px;
 } 
+
+.school-logo {
+  height: 80px;
+  margin-left: 70px;
+}
 
 /* ---------------------------- Content Section ---------------------------- */
 .content-section {
